@@ -1,0 +1,144 @@
+<div class="container">
+  <div class="row">
+    <h1>Application for test REST API services!</h1>
+    <div class="form-group">
+      <label>Base url</label>
+      <input type="text" ng-model="main.baseUrl" class="form-control" />
+    </div>
+    
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        GET
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-9">
+            <label class="radio-inline" ng-repeat="item in main.keyResult.get track by $index">
+              <input type="radio" ng-model="main.visibleKeyGet" ng-value="item"> {{item}}
+            </label>
+            <textarea class="form-control" rows="3" ng-model="main.result.get"></textarea>
+          </div>
+          <div class="col-md-3">
+            <button class="btn btn-success" ng-click="main.sendGet()">SEND</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        GET Single
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-9">
+            <label class="radio-inline" ng-repeat="item in main.keyResult.gets">
+              <input type="radio" ng-model="main.visibleKeyGets" ng-value="item"> {{item}}
+            </label>
+            <textarea class="form-control" rows="3" ng-model="main.result.gets"></textarea>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label class="col-sm-2 control-label">ID</label>
+              <div class="col-sm-10">
+                <input type="number" class="form-control" ng-model="main.idForGet">
+              </div>
+            </div>
+            <br/>
+            <br/>
+             <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                  <button class="btn btn-success" ng-click="main.sendGetS()">SEND</button>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        POST
+      </div>
+      <div class="panel-body">
+        <div class="col-md-9">
+          <textarea class="form-control" rows="3" ng-model="main.sendData"></textarea>
+          <br/>
+          <label class="radio-inline" ng-repeat="item in main.keyResult.post">
+            <input type="radio" ng-model="main.visibleKeyPost" ng-value="item"> {{item}}
+          </label>
+          <textarea class="form-control" rows="3" ng-model="main.result.post"></textarea>
+        </div>
+        <div class="col-md-3">
+          <button class="btn btn-success" ng-click="main.sendPost()">SEND</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        PUT
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-9">
+            <textarea class="form-control" rows="3" ng-model="main.sendDataPut"></textarea>
+            <br/>
+            <label class="radio-inline" ng-repeat="item in main.keyResult.put">
+              <input type="radio" ng-model="main.visibleKeyPut" ng-value="item"> {{item}}
+            </label>
+            <textarea class="form-control" rows="3" ng-model="main.result.put"></textarea>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label class="col-sm-2 control-label">ID</label>
+              <div class="col-sm-10">
+                <input type="number" class="form-control" ng-model="main.idForPut">
+              </div>
+            </div>
+            <br/>
+            <br/>
+             <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                  <button class="btn btn-success" ng-click="main.sendPut()">SEND</button>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        Delete
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-9">
+            <label class="radio-inline" ng-repeat="item in main.keyResult.delete">
+              <input type="radio" ng-model="main.visibleKeyDelete" ng-value="item"> {{item}}
+            </label>
+            <textarea class="form-control" rows="3" ng-model="main.result.delete"></textarea>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label class="col-sm-2 control-label">ID</label>
+              <div class="col-sm-10">
+                <input type="number" class="form-control" ng-model="main.idForDelete">
+              </div>
+            </div>
+            <br/>
+            <br/>
+             <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                  <button class="btn btn-success" ng-click="main.sendDelete()">SEND</button>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
